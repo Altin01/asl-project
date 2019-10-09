@@ -1,0 +1,47 @@
+
+.content {
+    margin: 20px;
+    
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: white;
+    text-align: left;
+    // display: grid;
+    // grid-template-rows: auto auto auto;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto 80% 50px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    background-color: #E9EBEE;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    // margin-right: 20px;
+}
+
+.list-id {
+
+}
+
+.wallpaper {
+    width: 100%;
+}
+
+.title{
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+.body {
+    font-size: 20px;
+}
