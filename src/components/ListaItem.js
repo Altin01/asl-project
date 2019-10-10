@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 // import '../style/myStyle.css'
 import '../style/_main.scss'
+import { Link } from 'react-router-dom';
+// import { Edit } from '@material-ui/icons';
+
 
 export default class ListaItem extends Component {
-
     render() {
         return (
             <div className="content">
@@ -14,20 +16,14 @@ export default class ListaItem extends Component {
                     <div>
                         <p className="title">{this.props.title}</p>
                     </div>
-                    <div>
-                        <button>Edit</button>
+                    <div >
+
+                        <Link className="btn" to={{ pathname: "/card", state: { id: this.props.id, title: this.props.title, body: this.props.body } }}>
+                            Edit
+                        </Link>
+
                     </div>
                 </div>
-                {/* <div className="title">
-                    <h1>{this.props.title}</h1>
-
-                </div>
-
-                <div className="primary">
-
-                    <h5 className="body">{this.props.body}</h5>
- 
-                </div> */}
                 <div>
                     <img className="wallpaper" src="https://source.unsplash.com/1600x900/?nature" />
                 </div>

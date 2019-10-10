@@ -10,9 +10,12 @@ const App = () => {
   return (
     <React.Fragment>
       <Router>
-        <Route path="/card" component={Card} />
+        <Route path="/card" component={Card} exact />
+        <Route path="/" component={ListPage} exact />
+
+
       </Router>
-      <ListPage />
+
     </React.Fragment>
   )
 }

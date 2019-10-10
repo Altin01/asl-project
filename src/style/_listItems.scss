@@ -45,3 +45,23 @@
 .body {
     font-size: 20px;
 }
+
+.btn-bottom {
+    margin: 10px;
+}
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #C3CBCF;
+    border-radius: 5px;
+    margin: 50px;
+    // width: 100%;
+}
+
+.btn-next {
+    border: 0;
+    background-color: transparent;
+}

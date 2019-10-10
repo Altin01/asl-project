@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import ListaItem from '../components/ListaItem'
 import paginate from 'paginate-array';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/myStyle.css'
+
 
 export default class ListPage extends Component {
 
@@ -82,24 +83,30 @@ export default class ListPage extends Component {
         const { page, size, currPage } = this.state;
 
         return (
-            <div>
-                <div>page: {page}</div>
-                <div>size: {size}</div>
-                <div>
-                    <label for="size">Size</label>
-                    <select name="size" id="size" onChange={this.handleChange}>
-                        <option value="5">5</option>
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                    </select>
-                </div>
+            <div style={{ padding: "0 30%" }}>
+
+
+
+
                 {currPage &&
-                    <div style={{ padding: "0 30%" }}>
+                    <div >
                         {currPage.data.map((posts, index) => <ListaItem key={index} id={posts.id} title={posts.title} body={posts.body} />)}
                     </div>
                 }
-                <button onClick={this.previousPage}>Previous Page</button>
-                <button onClick={this.nextPage}>Next Page</button>
+                <div className="pagination">
+                    <input type="button" className="btn btn-next" variant="primary btn-bottom" onClick={this.previousPage} value="<" />
+                    <p >{page}</p>
+                    <input type="button" className="btn btn-next" variant="primary btn-bottom" onClick={this.nextPage} value=">" />
+                    <p >{size}</p>
+                    <div className="">
+                        <select name="size" id="size" onChange={this.handleChange}>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                        </select>
+                    </div>
+
+                </div>
             </div>
         )
     }
